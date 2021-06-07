@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title></title>
+
+      
+
+      
+          <link rel="stylesheet" href="https://adavidwilson.com/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;adavidwilson.com">
+                                <span itemprop="name">Home
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;adavidwilson.com&#x2F;categories">
+                                <span itemprop="name">Categories
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;adavidwilson.com&#x2F;tags">
+                                <span itemprop="name">Tags
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;anotherdavidwilson&#x2F;">
+                                <span itemprop="name">LinkedIn
+                                </span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Nerd Dictation: Offline Dictation for Linux</h1>
+        <span class="muted">
+    <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>5 minute read</span>
+    <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2021-06-07
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <p>I've been suffering from a particularly bad bout of cubital tunnel syndrome recently due to less than ergonomic practices with my laptop and practicing classical guitar. This has led me to look into various accessibility solutions for typing with one hand. In this blog post, I'll be looking at the various solutions that I found. We'll start by going over how I found these solutions, what I ended up choosing (spoiler alert: nerd-dictation) then finally I'll talk about how I configured my system using sxhkd to toggle dictation by pressing the function key twice on my keyboard (hearkening back to my macOS days).</p>
+<span id="continue-reading"></span><h2 id="my-system">My system</h2>
+<p>I must confess that I use Arch Linux which means that I have a passion for succumbing to configuration paralysis. This is a well documented condition where Arch users in particular spend days tweaking very small aesthetic minor features of their setup since nothing is given to you by default on a completed Arch install. All jokes aside, the benefits of using Arch are quite extensive. By default the installed system only has on the order of two hundred or so packages and uses very little resources (~40 MB of RAM in the TTY, and ~100 MB in X with dwm). Another confession I must make is that I love used ThinkPads. My current main machine is a T440p, so Arch's emphasis on minimalism helps keep my 7-year-old machine quick and responsive.</p>
+<p>For my window manager, I use the Dynamic Window Manager (dwm) by suckless, and naturally I use st as my terminal. With all of this in mind let's go over how I discovered nerd-dictation and set it up on my system.</p>
+<h2 id="finding-a-solution-to-my-accessibility-problem">Finding a solution to my accessibility problem</h2>
+<p>So the first instinct whenever you run into an issue on the computer, in my case this accessibility problem, is to check a search engine. I use DuckDuckGo just to avoid giving unnecessary information to Google. So to start, I went ahead and looked up one-handed typing accessibility solutions. The exact search query used was &quot;one hand typing accessibility.&quot; The first link for me was to <a href="https://www.sralab.org/lifecenter/resources/computer-access-options-one-handed-typing">sralab</a> and goes over the various options for one-handed typing.</p>
+<p>It turns out that there are a number of different solutions to this problem. The first one that caught my eye was sticky keys. I had always assumed that this didn't really do anything and was just a way to annoy you if you were gaming in Windows. Despite the suggestion, I didn't think that this would offer much in the way of assisting my issue. Another solution stood out was the existence of a one-handed Dvorak keyboard layout. I use the standard Dvorak layout on all my machines, so this seemed like a possible solution, but I didn't really want to have to spend the time learning a completely new keyboard layout. Finally the last solution that stood out to me was dictation. Once I decided on going down that path, I checked my next resource—the Arch Linux wiki.</p>
+<h2 id="the-arch-wiki">The Arch wiki</h2>
+<p>If you've ever used Arch Linux before, you know that the <a href="https://wiki.archlinux.org">wiki</a> is an indispensable resource for being able to do pretty much anything. Whenever I'm looking for new software utilities the first place that I check is the applications list. For this particular case there's actually a <a href="https://wiki.archlinux.org/title/List_of_applications/Other#Speech_recognition">section dedicated to speech recognition</a>. After quickly looking through the GitHub repositories of all of the different projects listed, I decided on going with nerd-dictation since it seemed to be the most recently updated and was specifically created to allow for dictation-based typing.</p>
+<h2 id="nerd-dictation">Nerd Dictation</h2>
+<p>So what is <a href="https://github.com/ideasman42/nerd-dictation">nerd-dictation</a> anyway? In the words of its creator it's a tool for &quot;offline speech to text for desktop Linux.&quot; It's simple, hackable, and has zero overhead (since activation is fully manual). A quick look through the readme reveals that it is a python script that uses the VOSK-API and has a few creature comfort features. All you need to do is install the vosk package using pip, clone the repository, put the executable on the path somewhere, download a language model, and then you're off to the races.</p>
+<p>In my case I also wanted a simple way to toggle dictation, so I ended up using the simple x hotkey daemon (<code>sxhkd</code>) to set up a key bind for a custom script that checks for the existence of a file and toggles whether or not under dictation is running. </p>
+<h2 id="keybind-setup-and-use">Keybind setup and use</h2>
+<p>Here's the toggle script for starting and stopping dictation. It checks to see if a file is present in my user's cache directory. If it isn't, it starts dictation and creates the file also sending out of a notification. Then when the key bind is pressed again, it checks to see if the file exists once more. If it does, it stops dictation, removes the file and finally sends out another notification:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-fish" data-lang="fish"><span style="color:#65737e;">#!/usr/bin/env fish
+
+</span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">test -e </span><span style="color:#c0c5ce;">$</span><span style="color:#bf616a;">XDG_CACHE_HOME</span><span style="color:#c0c5ce;">/nerd-dictation
+  </span><span style="color:#bf616a;">nerd-dictation </span><span style="color:#c0c5ce;">end </span><span style="color:#bf616a;">--cookie </span><span style="color:#c0c5ce;">$</span><span style="color:#bf616a;">XDG_CACHE_HOME</span><span style="color:#c0c5ce;">/nerd-dictation
+  </span><span style="color:#bf616a;">rm </span><span style="color:#c0c5ce;">$</span><span style="color:#bf616a;">XDG_CACHE_HOME</span><span style="color:#c0c5ce;">/nerd-dictation
+  </span><span style="color:#bf616a;">notify-send </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">Dictation</span><span style="color:#c0c5ce;">&quot; &quot;</span><span style="color:#a3be8c;">Dictation stopped</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#b48ead;">else
+  </span><span style="color:#bf616a;">notify-send </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">Dictation</span><span style="color:#c0c5ce;">&quot; &quot;</span><span style="color:#a3be8c;">Dictation started</span><span style="color:#c0c5ce;">&quot;
+  </span><span style="color:#bf616a;">nerd-dictation </span><span style="color:#c0c5ce;">begin </span><span style="color:#bf616a;">--cookie </span><span style="color:#c0c5ce;">$</span><span style="color:#bf616a;">XDG_CACHE_HOME</span><span style="color:#c0c5ce;">/nerd-dictation </span><span style="color:#bf616a;">--full-sentence
+</span><span style="color:#b48ead;">end
+</span></code></pre>
+<p>The actual hotkey setup is simple using <code>sxhkd</code>. Just put the following in your <code>sxhkdrc</code> making sure <code>toggle-dictation</code> is on your <code>PATH</code>:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-fish" data-lang="fish"><span style="color:#bf616a;">XF86WakeUp </span><span style="color:#c0c5ce;">; </span><span style="color:#bf616a;">XF86WakeUp
+  toggle-dictation
+</span></code></pre><h2 id="conclusion">Conclusion</h2>
+<p>I hope this blog post helps anyone with similar issues and provides some information on how to configure your own Linux system whenever you run into issues like this which usually require more esoteric utilities.</p>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                    
+                    in <a href="https://adavidwilson.com/categories/rice/">rice</a>
+                
+                
+                    and tagged
+                    
+                        <a href="https://adavidwilson.com/tags/accessibility/">accessibility</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://adavidwilson.com/tags/ricing/">ricing</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://adavidwilson.com/tags/configuration/">configuration</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://adavidwilson.com/tags/linux/">linux</a>
+                        
+                            
+                                
+                                    and
+                                
+                            
+                        
+                    
+                        <a href="https://adavidwilson.com/tags/foss/">foss</a>
+                        
+                            
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+</html>

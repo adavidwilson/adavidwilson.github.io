@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title> - general</title>
+	<link href="https://adavidwilson.com/tags/general/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://adavidwilson.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-06-06T00:00:00+00:00</updated>
+	<id>https://adavidwilson.com/tags/general/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Yet another &quot;first&quot; blog post</title>
+		<published>2021-06-06T00:00:00+00:00</published>
+		<updated>2021-06-06T00:00:00+00:00</updated>
+		<link href="https://adavidwilson.com/first/" type="text/html"/>
+		<id>https://adavidwilson.com/first/</id>
+		<content type="html">&lt;p&gt;Well, it&#x27;s finally about time to make yet another personal site&#x2F;blog. I&#x27;ve truly lost count at this point but this time have some good ol&#x27; extrinsic motivation in the form of creating an online presence to help boost my chances at finding a job. Let&#x27;s hope things work out!&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;I&#x27;ll mainly be posting about random stuff I&#x27;ve learned. Eventually I&#x27;ll make my own Zola theme from scratch to help stand out and showcase my skills for the competitive web dev market. We&#x27;ll see how things go.&lt;&#x2F;p&gt;
+&lt;p&gt;For completion&#x27;s sake, this blog is hosted for free on &lt;a href=&quot;https:&#x2F;&#x2F;pages.github.com&#x2F;&quot;&gt;GitHub Pages&lt;&#x2F;a&gt; using &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt;, a static site generator built with &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
