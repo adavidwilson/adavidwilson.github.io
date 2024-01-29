@@ -1,0 +1,65 @@
+section:
+  name: Education
+  id: education
+  enable: true
+  weight: 3
+  showOnNavbar: true
+degrees:
+- name: Master of Arts in Philosophy concentration in Systematic Philosophy
+  icon: fa-book
+  timeframe: August 2022 - Present
+  institution:
+    name: Holy Apostles College & Seminary
+    url: "https://holyapostles.edu/"
+  grade:
+    scale: GPA
+    achieved: 4.0
+    outOf: 4.0
+- name: Big Data Analytics Certificate
+  icon: fa-database
+  timeframe: May 2019
+  institution:
+    name: Florida Atlantic University
+    url: "https://www.fau.edu/engineering/eecs/graduate/certificates/big-data/"
+- name: Master of Science in Computer Science
+  icon: fa-university
+  timeframe: January 2018 - May 2019
+  institution:
+    name: Florida Atlantic University
+    url: "https://www.fau.edu/engineering/"
+  grade:
+    scale: GPA
+    achieved: 4.0
+    outOf: 4.0
+  publications:
+  - title: >
+      Genetic-GNN: Evolutionary architecture search for graph neural networks
+    url: >
+      https://www.sciencedirect.com/science/article/abs/pii/S0950705122003525
+  - title: Multi-class imbalanced graph convolutional network learning
+    url: "https://par.nsf.gov/biblio/10199469"
+  - title: >
+      In-stream hydrokinetic turbine fault detection and fault tolerant
+      control-a benchmark model
+    url: "https://ieeexplore.ieee.org/abstract/document/8815231"
+  - title: >
+      Bidirectional long short-term memory networks for rapid fault detection in
+      marine hydrokinetic turbines
+    url: "https://ieeexplore.ieee.org/abstract/document/8614105"
+  - title: >
+      FAST-based in-stream hydrokinetic generation system modeling for MCM and
+      PHM (Poster)
+- name: Bachelor of General Studies, summa cum laude
+  icon: fa-graduation-cap
+  timeframe: January 2014 - December 2017
+  institution:
+    name: Florida Atlantic University
+    url: "https://www.fau.edu/engineering/"
+  grade:
+    scale: GPA
+    achieved: 3.9
+    outOf: 4.0
+  publications:
+  - title: >
+      Deep learning-aided cyber-attack detection in power transmission systems
+    url: "https://ieeexplore.ieee.org/abstract/document/8586334"

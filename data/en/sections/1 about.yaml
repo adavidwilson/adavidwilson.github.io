@@ -1,0 +1,52 @@
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+designation: Software Engineer
+company:
+  name: Greenway Health, LLC
+  url: "https://www.greenwayhealth.com/"
+summary: >
+  I'm a software engineer with 2 years of experience as a platform
+  engineer/DevOps practitioner. I support the entire technical organization
+  within the company alongside my teammates by building useful tools and
+  infrastructure for workflow and product-specific automation, CI/CD, and
+  enabling IaC.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "david@adavidwilson.com"
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/adavidwilson"
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/anotherdavidwilson"
+badges:
+- type: soft-skill-indicator
+  name: Terraform
+  percentage: 100
+  color: blue
+- type: soft-skill-indicator
+  name: Python
+  percentage: 100
+  color: yellow
+- type: soft-skill-indicator
+  name: Jenkins
+  percentage: 90
+  color: pink
+- type: soft-skill-indicator
+  name: AWS
+  percentage: 80
+  color: green
+- type: soft-skill-indicator
+  name: Kubernetes
+  percentage: 75
+  color: sky
+- type: soft-skill-indicator
+  name: Go
+  percentage: 75
+  color: orange

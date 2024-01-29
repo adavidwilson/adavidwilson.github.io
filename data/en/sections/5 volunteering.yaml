@@ -1,0 +1,43 @@
+section:
+  name: Volunteering
+  id: volunteering
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  template: sections/experiences.html
+experiences:
+- company:
+    name: Knights of Columbus
+    location: Oakland Park, FL
+    overview: >
+      The Knights of Columbus is a Catholic fraternal organization dedicated to
+      serving communities and performing acts of charity. I serve as a chair
+      officer of our council.
+  positions:
+  - designation: Recorder
+    start: July 2022
+    responsibilities:
+    - Take minutes during monthly council meetings.
+    - Manage Zoom for remote attendees.
+    - >
+      Control the meeting presentation materials using Open Broadcaster Software
+      (OBS) Studio
+- company:
+    name: Saint Coleman Catholic Church
+    location: Pompano Beach, FL
+    overview: >
+      St. Coleman is a large vibrant Catholic parish in Pompano Beach, FL.
+  positions:
+  - designation: Catechist
+    start: September 2022
+    responsibilities:
+    - Manage a class of students ranging from 4th to 7th grade.
+    - Create inclusive learning activities to keep students engaged.
+    - Evaluate learning outcomes in a grade-free environment.
+  - designation: Cantor
+    start: October 2021
+    responsibilities:
+    - Practice and maintain vocal technique.
+    - Be flexible for Mass scheduling.
+    - Sing and work well with other musicians.
+    - Play trumpet on special occasions.

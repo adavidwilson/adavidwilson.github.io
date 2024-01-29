@@ -1,0 +1,118 @@
+section:
+  name: Experience
+  id: experiences
+  enable: true
+  weight: 2
+  showOnNavbar: true
+experiences:
+- company:
+    name: Greenway Health, LLC
+    url: "https://www.greenwayhealth.com/"
+    location: Tampa, FL (Remote)
+    overview: >
+      Greenway Health, LLC is a privately-owned vendor of health information
+      technology (HIT) including integrated electronic health record (EHR),
+      practice management, and revenue cycle management solutions. Intergy,
+      Greenway’s cloud-based EHR and practice management solution, serves
+      ambulatory healthcare practices. The company has offices in Tampa,
+      Florida; Carrollton, Georgia; and Bangalore, India.
+      <a href="https://en.wikipedia.org/wiki/Greenway_Health">Wikipedia</a>
+  positions:
+  - designation: Software Engineer
+    start: October 2023
+    responsibilities:
+    - >
+      Support the entire technical organization within the company by creating
+      platforms, tools, automation, and documentation, as well as providing
+      ongoing support through Salesforce tickets and direct asks.
+    - >
+      Develop internal products and infrastructure in an agile manner using
+      Python, Groovy, Bash, Jenkins, etc. as needed.
+    - >
+      Contribute to roadmap planning for platform development to continuously
+      shift company workflow toward DevOps principles.
+  - designation: Associate Software Engineer
+    start: August 2021
+    end: September 2023
+    responsibilities:
+      - >
+        Completed the Kubernetes build cluster leveraging Ansible to provide
+        ephemeral on-demand CI/CD build nodes in Jenkins.
+      - >
+        Spearheaded and delivered a greenfield Terraform provider for our
+        internal identity product using Go with automated testing and CI/CD.
+      - >
+        Service support tickets requesting documentation for company workflow or
+        access to internal systems primarily using Active Directory. Create new
+        access patterns and groups as needed in our systems.
+- company:
+    name: Integrum Tech, LLC
+    location: St. Petersburg, FL (Remote)
+    overview: >
+      Integrum Tech, LLC was a company I founded in partnership with a friend to
+      provide freelance tech consulting to local businesses.
+  positions:
+  - designation: Freelance Consultant
+    start: May 2021
+    end: March 2022
+    responsibilities:
+      - Manage LLC administration, operations, and finances.
+      - >
+        Translate functional and quality requirements into software architecture
+        and implement in a timely manner after meeting with clients.
+      - Delivered a proprietary custom solution for automating project progress
+        reporting for a local property management contractor.
+- company:
+    name: Palm Beach State College
+    url: "https://www.palmbeachstate.edu/"
+    location: Lake Worth, FL
+    overview: >
+      I taught two courses in computer science one semester at the end of my
+      graduate studies before transitioning to software engineering. I have
+      plans to teach again someday once my schedule is more under control.
+  positions:
+  - designation: Adjunct Instructor, Computer Science
+    start: August 2020
+    end: December 2020
+    responsibilities:
+      - "Construct, teach, and grade COP1000: Introduction to Programming"
+      - "Construct, teach, and grade COP2805: Advanced Java Programming"
+- company:
+    name: Florida Atlantic University
+    url: "https://www.fau.edu/engineering/"
+    location: Boca Raton, FL
+    overview: >
+      Florida Atlantic University (Florida Atlantic or FAU) is a public research
+      university with its main campus in Boca Raton, Florida and satellite 
+      campuses in Dania Beach, Davie, Fort Lauderdale, Jupiter, and Fort Pierce.
+      The university is a member of the State University System of Florida. FAU
+      was established as Florida's fifth public university and is classified
+      among "R2: Doctoral Universities – High research activity".
+      <a href="https://en.wikipedia.org/wiki/Florida_Atlantic_University">Wikipedia</a>
+  positions:
+  - designation: Graduate Research Assistant
+    start: January 2018
+    end: May 2021
+    responsibilities:
+    - >
+      Conduct research for the FAU Institute for Sensing and Embedded Network
+      Systems Engineering (<a href="https://www.fau.edu/isense/">I-SENSE</a>).
+    - >
+      Contribute toward research group publications in technical support,
+      editing, data processing, methodologies, etc.
+    - >
+      Mentor summer Research Experience for Undergraduates (REU) students with
+      the goal of producing publications and advancing the field of deep
+      learning applications.
+  - designation: Graduate Teaching Assistant
+    start: January 2018
+    end: May 2021
+    responsibilities:
+    - >
+      Lead lab TA for introductory electronics labs across all computer and
+      electrical engineering majors.
+    - >
+      Provide support for student engagement and learning during and after
+      class.
+    - Grade programming assignments providing constructive feedback for
+      learning.

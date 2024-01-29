@@ -1,0 +1,36 @@
+section:
+  name: Accomplishments
+  id: accomplishments
+  enable: true
+  weight: 4
+  showOnNavbar: true
+accomplishments:
+- name: TA of the Year
+  timeline: "February 2021"
+  organization:
+    name: Florida Atlantic University
+    url: https://www.fau.edu/engineering/
+  courseOverview: >
+    I was picked as the TA of the Year after serving as lead lab TA for CDA
+    3201C, CDA 3331C, and other electronics lab courses. In that role, I
+    assisted the lab director and multiple professors as liason with other TAs
+    to assemble kits, help students with projects, and grade labs for a cohort
+    of over 400 students per semester.
+- name: Outstanding PhD Qualifying Exam
+  timeline: "February 2020"
+  organization:
+    name: Florida Atlantic University
+    url: https://www.fau.edu/engineering/
+  courseOverview: >
+    I was recognized as having the highest quality PhD qualifying exam in the
+    entire College of Computer & Electrical Engineering & Computer Science at
+    FAU for 2019 covering the full scope of my graduate studies.
+- name: Summer Undergraduate Research Fellowship
+  timeline: "May 2018 - August 2018"
+  organization:
+    name: Florida Atlantic University
+    url: https://www.fau.edu/ouri/surf/
+  courseOverview: >
+    My first experience conducting research. Worked on developing turbulence
+    measuring and monitoring algorithms for acoustic doppler velocimeter (ADV)
+    and inertial measurement unit (IMU) data in MATLAB.

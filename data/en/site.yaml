@@ -1,0 +1,9 @@
+copyright: © 2023 David Wilson
+description: >
+  David Wilson's interactive résumé/portfolio site built with Hugo and Toha.
+openGraph:
+  title: David's Portfolio
+  type: website
+  description: Portfolio and personal blog of David Wilson.
+  image: images/author/david.jpeg
+  url: https://www.adavidwilson.com/

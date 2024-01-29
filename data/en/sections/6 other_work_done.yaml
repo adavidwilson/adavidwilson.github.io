@@ -1,0 +1,41 @@
+section:
+  name: Other Work
+  id: otherwork
+  enable: true
+  weight: 6
+  showOnNavbar: true
+  template: sections/experiences.html
+experiences:
+- company:
+    name: Detroit Auto, LLC
+    location: Margate, FL
+    overview: >
+      Detroit Auto, LLC was an independent automotive repair shop in Margate,
+      FL.
+  positions:
+  - designation: Apprentice Mechanic
+    start: June 2015
+    end: December 2017
+    responsibilities:
+    - Diagnose and repair cars from all manufacturers.
+    - Provide a transparent and engaging client experience.
+    - Data entry record management.
+- company:
+    name: Sam Ash Music
+    url: "http://www.samash.com/"
+    location: Margate, FL
+    overview: >
+      Sam Ash Music was founded in 1924, and is the largest family-owned chain
+      of musical instrument stores in the United States, with 44 locations in 16
+      states. With corporate headquarters in Hicksville, New York, Sam Ash sells
+      musical instruments, recording equipment, DJ and lighting equipment, and
+      professional sound.
+      <a href="https://en.wikipedia.org/wiki/Sam_Ash_Music">Wikipedia</a>
+  positions:
+  - designation: Sales Associate
+    start: June 2013
+    end: December 2013
+    responsibilities:
+    - Leverage musical expertise to inform customers' purchasing decisions.
+    - Maintain a clean and organized department with tuned instruments.
+    - Keep inventory up to date.
